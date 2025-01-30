@@ -2,14 +2,16 @@
 using Moq;
 
 namespace TicketBookingCore
+
 {
+    public interface ITicketBookingRepository
+    {
+        void Save(TicketBookingRequest request);
+    }
+
     public class TicketBookingRequestProcessor
     {
-        private readonly ITicketBookingRepository _ticketBookingRepository;
-        public interface ITicketBookingRepository
-        {
-            void Save(TicketBookingRequest request);
-        }
+        private readonly ITicketBookingRepository _ticketBookingRepository;      
 
         public void Save(TicketBookingRequest request)
         {
@@ -19,7 +21,7 @@ namespace TicketBookingCore
                 LastName = request.LastName,
                 Email = request.Email,
             };
-
+            _ticketBookingRepository.Save(request);
             
         }
 

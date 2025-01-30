@@ -36,7 +36,6 @@ namespace TicketBookingCore.Tests
         [Fact]
         public void ShouldThrowExceptionIfRequestIsNull()
         {
-
             var act = Assert.Throws<ArgumentNullException>(() => _processor.Book(null));
             Assert.Equal("request", act.ParamName);
         }
