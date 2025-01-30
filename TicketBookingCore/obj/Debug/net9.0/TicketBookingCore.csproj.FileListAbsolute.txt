@@ -1,0 +1,13 @@
+D:\cSharpPractice\TicketBooking\TicketBookingCore\bin\Debug\net9.0\TicketBookingCore.deps.json
+D:\cSharpPractice\TicketBooking\TicketBookingCore\bin\Debug\net9.0\TicketBookingCore.dll
+D:\cSharpPractice\TicketBooking\TicketBookingCore\bin\Debug\net9.0\TicketBookingCore.pdb
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\TicketBookingCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\TicketBookingCore.AssemblyInfoInputs.cache
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\TicketBookingCore.AssemblyInfo.cs
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\TicketBookingCore.csproj.CoreCompileInputs.cache
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\TicketBookingCore.dll
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\refint\TicketBookingCore.dll
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\TicketBookingCore.pdb
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\ref\TicketBookingCore.dll
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\TicketBookingCore.csproj.AssemblyReference.cache
+D:\cSharpPractice\TicketBooking\TicketBookingCore\obj\Debug\net9.0\TicketBookingCore.sourcelink.json
