@@ -5,25 +5,27 @@ namespace TicketBookingCore
 {
     public class TicketBookingRequestProcessor
     {
+        private readonly ITicketBookingRepository _ticketBookingRepository;
         public interface ITicketBookingRepository
         {
-
+            void Save(TicketBookingRequest request);
         }
 
         public void Save(TicketBookingRequest request)
         {
-            TicketBooking ticketBooking = new TicketBooking
+            var ticketBooking = new TicketBooking
             {
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Email = request.Email,
             };
 
+            
         }
 
-        public TicketBookingRequestProcessor()
+        public TicketBookingRequestProcessor(ITicketBookingRepository ticketBookingRepository)
         {
-            Mock<ITicketBookingRepository> _ticketBookingRepositoryMock;
+            _ticketBookingRepository = ticketBookingRepository;
         }
 
         public TicketBookingResponse Book(TicketBookingRequest request)

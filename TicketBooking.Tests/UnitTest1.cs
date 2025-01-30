@@ -6,11 +6,12 @@ namespace TicketBookingCore.Tests
     public class TicketBookingRequestProcessorTests
     {
         private readonly TicketBookingRequestProcessor _processor;
-        private Mock<ITicketBookingRepository> _ticketBookingRepositoryMock;
+        private readonly Mock<ITicketBookingRepository> _ticketBookingRepositoryMock;
 
         public TicketBookingRequestProcessorTests()
         {
-            _processor = new TicketBookingRequestProcessor();
+            _ticketBookingRepositoryMock = new Mock<ITicketBookingRepository>();
+            _processor = new TicketBookingRequestProcessor(_ticketBookingRepositoryMock.Object);
         }
 
         [Fact]
@@ -35,7 +36,7 @@ namespace TicketBookingCore.Tests
         [Fact]
         public void ShouldThrowExceptionIfRequestIsNull()
         {
-            var processor = new TicketBookingRequestProcessor();
+
             var act = Assert.Throws<ArgumentNullException>(() => _processor.Book(null));
             Assert.Equal("request", act.ParamName);
         }
@@ -51,8 +52,11 @@ namespace TicketBookingCore.Tests
 
             _processor.Save(request);
 
-            _ticketBookingRepositoryMock.Verify(repo => repo.Save(It.IsAny<TicketBookingRequest>()), Times.Once);
-
+            _ticketBookingRepositoryMock.Verify(repo => repo.Save(It.Is<TicketBookingRequest>(r =>
+            r.FirstName == request.FirstName &&
+            r.LastName == request.LastName &&
+            r.Email == request.Email
+            )), Times.Once());
         }
     }
 }
